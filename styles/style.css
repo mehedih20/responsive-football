@@ -30,7 +30,6 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
-  background-color: #efefef;
 }
 
 a {
@@ -40,6 +39,20 @@ a {
 
 li {
   list-style: none;
+}
+
+/*------------- Keyframes ------------ */
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ----------------- Re-useable -------------- */
@@ -89,20 +102,6 @@ li {
 
 .section-img img {
   width: 100%;
-}
-
-/*------------- Keyframes ------------ */
-
-@keyframes pulsate {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.95);
-  }
-  100% {
-    transform: scale(1);
-  }
 }
 
 /* ------------ Header --------------- */
@@ -198,6 +197,7 @@ li {
 .section-score {
   padding: 7rem 0;
   background: var(--color-white);
+  background-color: #efefef;
 }
 /*------------ Upcoming ---------------*/
 
@@ -214,3 +214,92 @@ li {
   font-size: 2rem;
   animation: pulsate 2s infinite;
 }
+
+/* --------- Footer ---------------- */
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 0;
+}
+
+.footer-img {
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+.footer-img img {
+  width: 100%;
+}
+
+.footer-links {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.footer-link {
+  margin: 0 1rem;
+  padding: 1rem;
+  border-radius: 5rem;
+  background-color: #efefef;
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-black);
+}
+
+.footer-container p {
+  color: var(--color-text);
+  font-size: 1.4rem;
+}
+
+/* ==================================
+            Media Queries
+===================================== */
+
+@media (max-width: 776px) {
+  .navbar {
+    padding: 3rem 0;
+  }
+
+  .nav-item {
+    margin-right: 1.5rem;
+  }
+
+  .header-hero {
+    padding: 2rem 0 5rem;
+  }
+
+  .hero-text h1 {
+    font-size: 5rem;
+  }
+  .section-text h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .nav-links {
+    flex-direction: column;
+  }
+  .nav-item {
+    margin: 0 0 1rem 0;
+  }
+  .hero-text h1 {
+    font-size: 3.5rem;
+  }
+  .section-text h2 {
+    font-size: 2.5rem;
+  }
+  .player-text h3 {
+    font-size: 1.8rem;
+  }
+}
+
+/*=================== The End ===================*/
