@@ -65,8 +65,44 @@ li {
 }
 
 .btn:hover {
-  color: var(--color-black);
-  background-color: var(--color-white);
+  background-color: #800b36;
+}
+
+.section-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: 5rem;
+  align-items: center;
+}
+
+.section-text h2 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.section-text p {
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: var(--color-text);
+}
+
+.section-img img {
+  width: 100%;
+}
+
+/*------------- Keyframes ------------ */
+
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* ------------ Header --------------- */
@@ -101,6 +137,7 @@ li {
 .header-hero {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 5rem;
   align-items: center;
   padding: 2rem 0 8rem;
 }
@@ -156,19 +193,24 @@ li {
   padding: 3rem 0 10rem;
 }
 
-.highlight-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
-  gap: 5rem;
-  align-items: center;
+/*------------ Scorer ---------------*/
+
+.section-score {
+  padding: 7rem 0;
+  background: var(--color-white);
+}
+/*------------ Upcoming ---------------*/
+
+.section-upcoming {
+  padding: 7rem 0;
 }
 
-.highlight-text h2 {
-  font-size: 4.5rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
+.upcoming-text {
+  text-align: center;
 }
 
-.highlight-img img {
-  width: 100%;
+.upcoming-text p {
+  color: var(--color-button);
+  font-size: 2rem;
+  animation: pulsate 2s infinite;
 }
