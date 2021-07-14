@@ -41,6 +41,15 @@ li {
   list-style: none;
 }
 
+.fa-arrow-right {
+  margin-left: 0.5rem;
+}
+
+.fa-sign-in-alt,
+.fa-arrow-left {
+  margin-right: 0.5rem;
+}
+
 /*------------- Keyframes ------------ */
 
 @keyframes pulsate {
@@ -83,7 +92,7 @@ li {
 
 .section-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 5rem;
   align-items: center;
 }
